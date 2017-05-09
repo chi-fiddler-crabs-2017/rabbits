@@ -87,6 +87,9 @@ namespace :db do
   desc "Drop, create, and migrate the database"
   task :reset => [:drop, :create, :migrate]
 
+  desc "do everything"
+  task :yolo => [:drop, :create, :migrate, :seed]
+
   desc "Create the databases at #{DB_NAME}"
   task :create do
     puts "Creating development and test databases if they don't exist..."

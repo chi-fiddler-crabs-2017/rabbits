@@ -1,0 +1,16 @@
+<h1>Add Rabbit</h1>
+
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<FORM method="POST" action="/rabbits">
+  <input type="text" name="rabbit[name]" placeholder="name" value="<%= @rabbit.name %>">
+  <input type="text" name="rabbit[breed]" placeholder="name" value="<%= @rabbit.breed %>">
+  <input type="submit">
+</FORM>

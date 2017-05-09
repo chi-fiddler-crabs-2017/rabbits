@@ -1,0 +1,14 @@
+<% if true %>
+<h1>RABBIT!</h1>
+<% else %>
+<h1>NOT RABBIT!</h1>
+<% end %>
+
+<ul>
+<% @rabbits.each do |rabbit| %>
+  <li><a href="/rabbits/<%= rabbit.id %>"><%= rabbit.name %>: <%= rabbit.breed %></a></li>
+<% end %>
+</ul>
+
+<a href="/rabbits/new">Add Rabbit</a>
+
